@@ -7,7 +7,6 @@
         <div class="ten">
           <video autoplay muted loop style="width:100%">
             <source src="video/pexelsvidfour.mp4" type="video/mp4">
-            Your browser does not support HTML5
           </video>
           <div class="overlay"></div>
           <div class="eleven" id="letter">
