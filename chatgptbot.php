@@ -1,5 +1,6 @@
 <?php
 require_once("partials/header.php");
+require_once("env.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (isset($_POST['question'])) {
@@ -26,7 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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'; // Replace with your OpenAI API key
+    $api_key = $env['OPENAI_API_KEY'];
+    $headers[] = 'Authorization: Bearer ' . $api_key; // Replace with your OpenAI API key
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);
