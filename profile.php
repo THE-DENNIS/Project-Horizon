@@ -96,7 +96,7 @@ $user = $fill->getUserDetails($user_id);
       <div class="card custom-card mb-3">
         <div class="card-body">
           <h5 class="card-title">Connections</h5>
-          <p class="card-text">Reach out and connect with other Horizon users around you.</p>
+          <p class="card-text">Reach out and connect with other Horizon users around you and around the world.</p>
           <a href='localconnect.php?name=<?php echo $user["user_current_location"]?>' class="btn btn-info btn-dashboard">Connect</a>
         </div>
       </div>
@@ -105,7 +105,7 @@ $user = $fill->getUserDetails($user_id);
     <div class="col-md-4">
       <div class="card custom-card mb-3">
         <div class="card-body">
-          <h5 class="card-title">Learn about your new country</h5>
+          <h5 class="card-title">Your new Country</h5>
           <p class="card-text">Find out key details about your new country.</p>
           <a href="countryinfo.php" class="btn btn-info btn-dashboard">Explore</a>
         </div>
@@ -115,8 +115,8 @@ $user = $fill->getUserDetails($user_id);
     <div class="col-md-4">
       <div class="card custom-card mb-3">
         <div class="card-body">
-          <h5 class="card-title">Learn to speak your new language in seconds?</h5>
-          <p class="card-text">Learn to say basic things in your new language. Break that language barrier.</p>
+          <h5 class="card-title">Language and Facts</h5>
+          <p class="card-text">Learn to say basic things in your new language, Break that language barrier. Ask key Questions and get answers, Get to know everthing about your new environment</p>
           <a href="Chatgptbot.php" class="btn btn-info btn-dashboard">Learn Basics</a>
         </div>
       </div>

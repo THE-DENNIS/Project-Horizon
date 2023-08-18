@@ -12,6 +12,14 @@
             
            
 <div class="container">
+
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
+  
 <div class="dashboard">
 <div class="text-center" style="background-color:gray; color:white;">
 <img src="<?php echo "process/".$user["user_dp"]; ?>" class="profile-img" alt="Profile Picture">

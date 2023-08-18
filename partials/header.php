@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="miniproject.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="icon" type="image/jpg" size="30x30" href="images/horizonlogo.jpg">
     <title>Horizon</title>
 
 </head>
@@ -78,6 +79,8 @@
 
 
 </style>
+
+
 <body>
     <div class="container-fluid">
   
@@ -112,7 +115,10 @@
                             <a class="nav-link" href="profile.php">Profile</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="contactus.php">Contact Us</a>
+                            <a class="nav-link" href="#foot">Contact Us</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="faq.php">FAQs</a>
                           </li>
                         </ul>
                         

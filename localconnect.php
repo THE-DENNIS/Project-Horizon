@@ -18,6 +18,14 @@ $logged_in_user_id = $_SESSION["user_id"];
 ?>
 
 <div class="container">
+
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
+  
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-10 text-end pb-3">

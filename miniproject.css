@@ -232,8 +232,7 @@ div{
 
 .footer{
   background-color:rgb(9, 1, 22);
-  color:white;
-  height: 400px;
+  /* color:white; */
 }
 
 .navcontrol{

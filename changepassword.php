@@ -3,7 +3,13 @@ require_once("partials/header.php");
 // require_once("guard/userguard.php"); 
 ?>
 <div class="container">
-    
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
+
  <div class="row justify-content-center"> 
   <div class="col-md-9 mb-4">
     <div class="card mb-4">

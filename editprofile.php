@@ -18,25 +18,31 @@ require_once("guard/userguard.php");
             
            
 <div class="container">
-<div class="dashboard">
-<div class="text-center">
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
+    <div class="dashboard">
+    <div class="text-center">
 
 
-<img src="<?php echo "process/".$user["user_dp"]; ?>" class="profile-img" alt="Profile Picture">
-<h2 class="profile-name"><?php echo $user["user_fullname"]; ?></h2>
-<p class="profile-info">Location: <?php echo $user["user_country_name"]; ?></p>
-<p class="profile-info">Primary Language: <?php echo $user["user_primary_lang"]; ?></p>
-</div>
-<hr>
-  <h4>Bio</h4>
-  <p><?php echo $user["user_bio"]; ?></p>
-  <h4>Skills</h4>
-  <ul>
-  <li><?php echo $user["user_skills"]; ?></li>
-  </ul> 
-  <a href="editprofile.php" class="btn btn-edit-profile">Edit Profile</a>
- 
-</div>
+    <img src="<?php echo "process/".$user["user_dp"]; ?>" class="profile-img" alt="Profile Picture">
+    <h2 class="profile-name"><?php echo $user["user_fullname"]; ?></h2>
+    <p class="profile-info">Location: <?php echo $user["user_country_name"]; ?></p>
+    <p class="profile-info">Primary Language: <?php echo $user["user_primary_lang"]; ?></p>
+    </div>
+    <hr>
+      <h4>Bio</h4>
+      <p><?php echo $user["user_bio"]; ?></p>
+      <h4>Skills</h4>
+      <ul>
+      <li><?php echo $user["user_skills"]; ?></li>
+      </ul> 
+      <a href="editprofile.php" class="btn btn-edit-profile">Edit Profile</a>
+    
+    </div>
 </div>
 <div class="row">
       <div class="col-md-2"></div>

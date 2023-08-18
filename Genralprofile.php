@@ -17,6 +17,14 @@ $user['message_count'] = $message_count;
 ?>
 
 <div class="container">
+
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
+  
   <div class="row">
     <?php foreach ($getuser as $value) {
       $sender_id = $value["user_id"];
@@ -27,6 +35,7 @@ $user['message_count'] = $message_count;
         $message_count = $message->countReceivedMessagesFromUser($user_id, $sender_id); 
       }
     ?>
+    
       <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
         <div class="card text-center">
           <div class="card-body d-flex flex-column justify-content-center">

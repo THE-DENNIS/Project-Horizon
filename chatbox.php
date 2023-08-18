@@ -16,6 +16,13 @@ $previousMessages = $mg->getMessages($sender_id, $receiver_id);
 ?>
 
 <div class="container chatbox">
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
+
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <h3>Messages</h3>

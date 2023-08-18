@@ -97,7 +97,12 @@ if ($response !== false) {
 </head>
 
 <body>
-
+ <div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
     <div class="dashboard">
         <h1>Discover the wonders of your new country and explore its rich culture, diverse landscapes, and vibrant communities. Get ready to embark on a fascinating journey to uncover the hidden gems and fascinating facts about your own beloved new homeland.</h1>
 

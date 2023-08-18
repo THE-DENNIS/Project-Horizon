@@ -26,14 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $headers = array();
     $headers[] = 'Content-Type: application/json';
-    $headers[] = 'Authorization: Bearer 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'; // Replace with your OpenAI API key
+    $headers[] = 'Authorization: Bearer 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'; // Replace with your OpenAI API key
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $result = curl_exec($ch);
 
-    if (curl_errno($ch)) {
-      echo 'Error: ' . curl_error($ch);
-    }
+    // if (curl_errno($ch)) {
+    //   echo 'Error:please check your network ' . curl_error($ch);
+    // }
 
     $result = json_decode($result, true);
     curl_close($ch);
@@ -46,31 +46,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <!-- <div class="container"> -->
-  <div class="row gptbgcolor">
-    <div class="col-md-6 offset-md-3">
-      <div class="card mb-5 mt-5">
-        <div class="card-body">
-          <h5 class="card-title">Question:</h5>
-          <?php if (isset($_POST['question'])): ?>
-            <p class="card-text"><?php echo $_POST['question']; ?></p>
-          <?php endif; ?>
+<div class="row pb-3">
+    <div class="col-md-10"></div>
+    <div class="col-md-2 text-start">
+      <?php require_once("partials/backtoprofile.php"); ?>
+    </div>
+  </div>
 
-          <h5 class="card-title">Answer:</h5>
-          <?php if (isset($result['choices'][0]['text'])): ?>
-            <p class="card-text"><?php echo $result['choices'][0]['text']; ?></p>
-          <?php endif; ?>
+<div class="row gptbgcolor">
+  <div class="col-md-6 offset-md-3">
+    <div class="card mb-5 mt-5">
+      <div class="card-body">
+        <h5 class="card-title">Question:</h5>
+        <?php if (isset($_POST['question'])): ?>
+          <p class="card-text"><?php echo $_POST['question']; ?></p>
+        <?php endif; ?>
 
-          <form name="chatform" method="post">
-            <div class="form-group">
-              <label for="question">User:</label>
-              <textarea class="form-control" rows="3" id="question" name="question"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
+        <h5 class="card-title">Answer:</h5>
+        <?php if (isset($result['choices'][0]['text'])): ?>
+          <p class="card-text"><?php echo $result['choices'][0]['text']; ?></p>
+        <?php endif; ?>
+
+        <form name="chatform" method="post">
+          <div class="form-group">
+            <label for="question">User:</label>
+            <textarea class="form-control" rows="3" id="question" name="question" placeholder="Ask me anything about your new country. E.g: Few language tips, Fun facts about your country......"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
   </div>
+</div>
+
 <!-- </div> -->
 
 <?php require_once("partials/footer.php"); ?>
